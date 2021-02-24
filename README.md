@@ -1,0 +1,1 @@
+# vuetify-media-uploader
