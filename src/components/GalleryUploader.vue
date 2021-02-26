@@ -92,9 +92,7 @@ export default {
       return this.images[this.selected];
     }
   },
-  created() {
-    this.init();
-  },
+
   methods: {
     submit(files) {
       this.items = files;
