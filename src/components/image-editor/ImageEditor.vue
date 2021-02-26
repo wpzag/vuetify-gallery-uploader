@@ -17,7 +17,7 @@
               :style="filters"
             />
           </figure>
-          <div style="height:70px" class="pt-2">
+          <div style="height:70px " class="pt-2">
             <action-buttons
               :selected="selected"
               :filter-mode="filterMode"
