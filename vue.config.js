@@ -1,6 +1,6 @@
 module.exports = {
   transpileDependencies: ["vuetify"],
   css: {
-    extract: true
+    extract: false
   }
 };
