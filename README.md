@@ -23,8 +23,21 @@ methods:{
     }
 
 ```
-Screenshots
+```
+
+## Screenshots
+```
 
 ![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-1.png)
+
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-2.png)
+
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-3.png)
+
+## License
+
+MIT
+
+
 
 

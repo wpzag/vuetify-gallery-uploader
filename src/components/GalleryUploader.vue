@@ -18,17 +18,17 @@
 
     <v-dialog v-model="dialog" width="80%" persistent>
       <v-card dark class="overflow-hidden">
-        <v-btn
-          class="mx-2 pa-2"
-          fab
-          dark
-          large
-          absolute
-          style="top:15px;right:1px"
-          @click="close"
-        >
-          <v-icon dark>mdi-close</v-icon>
-        </v-btn>
+        <!--        <v-btn-->
+        <!--          class="mx-2 pa-2"-->
+        <!--          fab-->
+        <!--          dark-->
+        <!--          large-->
+        <!--          absolute-->
+        <!--          style="top:15px;right:1px"-->
+        <!--          @click="close"-->
+        <!--        >-->
+        <!--          <v-icon dark>mdi-close</v-icon>-->
+        <!--        </v-btn>-->
         <image-editor
           @image-edited="imageEdited"
           @image-removed="imageRemoved"
