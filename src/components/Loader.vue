@@ -30,18 +30,14 @@ export default {
 .z-colorful-loader span {
   display: inline-block;
   vertical-align: middle;
-  width: 0.6em;
-  height: 0.6em;
+  width: 0.7em;
+  height: 0.7em;
   margin: 0.19em;
   background: #007db6;
-  border-radius: 0.6em;
+  border-radius: 0.7em;
   animation: z-colorful-loader 1s infinite alternate;
 }
 
-/*
-         * Dots Colors
-         * Smarter targeting vs nth-of-type?
-         */
 .z-colorful-loader span:nth-of-type(2) {
   background: #008fb2;
   animation-delay: 0.2s;

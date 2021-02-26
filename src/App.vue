@@ -2,6 +2,8 @@
   <v-app>
     <v-main class=" text-center" style="padding-top: 250px;">
       <gallery-uploader @submit="submit" style="margin:0 auto" />
+
+      <v-img v-for="(img, index) in images" :key="index" :src="img"></v-img>
     </v-main>
   </v-app>
 </template>
@@ -23,6 +25,7 @@ export default {
   },
   methods: {
     submit(files) {
+      this.images = files;
       console.log(files);
       // this.images = files;
       //

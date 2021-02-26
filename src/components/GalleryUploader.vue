@@ -121,6 +121,7 @@ export default {
   methods: {
     emitFinalImages() {
       this.$emit("submit", this.images);
+      this.close();
     },
     close() {
       this.loading = true;
@@ -158,7 +159,6 @@ export default {
       this.filterMode = false;
     },
     init() {
-      console.log("init");
       const resizeValue = 0.35;
       this.items.forEach(file => {
         const fileName = file.name;

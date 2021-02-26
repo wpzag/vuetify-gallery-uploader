@@ -2,7 +2,7 @@
   "name": "vuetify-gallery-uploader",
   "version": "0.1.21",
   "private": false,
-  "description": "A simple gallery uploader plugin",
+  "description": "Vuetify gallery uploader/editor",
   "author": {
     "name": "Osama Mohamed",
     "email": "egypt.zag.eg@gmail.com"
@@ -60,7 +60,9 @@
   "keywords": [
     "vuetify",
     "gallery",
-    "uploader"
+    "uploader",
+    "editor",
+    "image"
   ],
   "license": "MIT",
   "repository": "https://github.com/osamaegy/vuetify-gallery-uploader"

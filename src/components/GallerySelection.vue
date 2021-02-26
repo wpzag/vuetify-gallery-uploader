@@ -88,11 +88,9 @@ export default {
       this.$emit("selected", index);
     },
     loaded(index) {
-      // console.log(this.images.length, index);
       this.loadedImages.push(index);
       this.init = true;
-    },
-    hoverAnimation() {}
+    }
   }
 };
 </script>
