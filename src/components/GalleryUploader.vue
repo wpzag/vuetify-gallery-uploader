@@ -45,7 +45,7 @@
         />
 
         <v-fade-transition>
-          <v-overlay :absolute="true" :opacity="1" :value="loading">
+          <v-overlay :absolute="true" :opacity="1" :value="true">
             <v-cool-loader />
           </v-overlay>
         </v-fade-transition>
@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import "../assets/style.css";
+
 import ImageEditor from "./image-editor/ImageEditor";
 import GallerySelection from "./GallerySelection";
 import DiscardChangesDialog from "./image-editor/DiscardChangesDialog";
