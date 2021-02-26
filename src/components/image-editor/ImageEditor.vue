@@ -98,7 +98,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 #u-previewed-image {
   height: 400px;
   transform: translateX(0);

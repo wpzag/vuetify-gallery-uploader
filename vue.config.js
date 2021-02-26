@@ -1,5 +1,12 @@
 module.exports = {
-  transpileDependencies: [
-    'vuetify'
-  ]
-}
+  banner: true,
+  output: {
+    extractCSS: false
+  },
+  plugins: {
+    vue: {
+      css: true
+    }
+  },
+  transpileDependencies: ["vuetify"]
+};
