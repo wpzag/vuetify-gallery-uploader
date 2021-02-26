@@ -1,6 +1,6 @@
 # Vuetify Gallery Uploader
 
-## Project setup
+## Installation
 ```
 npm i vuetify-gallery-uploader
 ```
@@ -23,10 +23,9 @@ methods:{
     }
 
 ```
-```
 
 ## Screenshots
-```
+
 
 ![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-5.png)
 
