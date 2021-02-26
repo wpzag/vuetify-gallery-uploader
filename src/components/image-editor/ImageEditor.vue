@@ -98,7 +98,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 #u-previewed-image {
   height: 400px;
   transform: translateX(0);
