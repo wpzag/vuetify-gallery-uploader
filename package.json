@@ -4,7 +4,7 @@
   "private": false,
   "description": "A simple gallery uploader plugin",
   "author": {
-    "name": "Osama MOhamed",
+    "name": "Osama Mohamed",
     "email": "egypt.zag.eg@gmail.com"
   },
   "scripts": {
@@ -13,14 +13,13 @@
     "lint": "vue-cli-service lint",
     "build-library": "vue-cli-service build --target lib --name vuetify-gallery-uploader ./src/install.js"
   },
-  "main": ".dist/vuetify-media-uploader.common.js",
+  "main": ".dist/vuetify-gallery-uploader.common.js",
   "files": [
     "dist"
   ],
   "dependencies": {
     "core-js": "^3.6.5",
     "cropperjs": "^1.5.11",
-    "image-file-resize": "^1.0.3",
     "vue": "^2.6.11",
     "vuetify": "^2.4.0"
   },
@@ -57,12 +56,12 @@
     "last 2 versions",
     "not dead"
   ],
-  "bugs": "https://github.com/osamaegy/vuetify-media-uploader/issues",
+  "bugs": "https://github.com/osamaegy/vuetify-gallery-uploader/issues",
   "keywords": [
     "vuetify",
     "gallery",
     "uploader"
   ],
   "license": "MIT",
-  "repository": "https://github.com/osamaegy/vuetify-media-uploader"
+  "repository": "https://github.com/osamaegy/vuetify-gallery-uploader"
 }
