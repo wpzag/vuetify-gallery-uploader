@@ -1,16 +1,16 @@
 import GalleryUploader from "./components/GalleryUploader.vue";
 
-const GalleryUploader = {
-  install(Vue, options) {
+const VuetifyGalleryUploader = {
+  install(Vue) {
     // Let's register our component globally
     // https://vuejs.org/v2/guide/components-registration.html
-    Vue.component("gallery-uploader", GalleryUploader);
+    Vue.component("v-gallery-uploader", GalleryUploader);
   }
 };
 
 // Automatic installation if Vue has been added to the global scope.
 if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(GalleryUploader);
+  window.Vue.use(VuetifyGalleryUploader);
 }
 
-export default GalleryUploader;
+export default VuetifyGalleryUploader;

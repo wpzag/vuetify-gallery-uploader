@@ -1,17 +1,17 @@
 {
   "name": "vuetify-gallery-uploader",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "A simple gallery uploader plugin",
   "author": {
-    "name": "Tushar Gugnani",
-    "email": "tushar@5balloons.info"
+    "name": "Osama MOhamed",
+    "email": "egypt.zag.eg@gmail.com"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-library": "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js"
+    "build-library": "vue-cli-service build --target lib --name vuetify-gallery-uploader ./src/install.js"
   },
   "main": ".dist/vuetify-media-uploader.common.js",
   "files": [
