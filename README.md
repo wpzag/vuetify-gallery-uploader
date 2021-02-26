@@ -27,11 +27,11 @@ methods:{
 ## Screenshots
 
 
-![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-5.png)
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-6.png)
 
-![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-2.png)
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-7.png)
 
-![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-3.png)
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-8.png)
 
 ## License
 

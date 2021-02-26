@@ -16,8 +16,14 @@
       @clicked="addImage"
     ></icon-button>
 
-    <v-dialog v-model="dialog" width="80%" persistent>
-      <v-card dark class="overflow-hidden">
+    <v-dialog
+      v-model="dialog"
+      width="80%"
+      persistent
+      overlay-opacity=".9"
+      overlay-color="black"
+    >
+      <v-card dark class="overflow-hidden" elevation="5">
         <!--        <v-btn-->
         <!--          class="mx-2 pa-2"-->
         <!--          fab-->
@@ -43,7 +49,7 @@
 
         <gallery-selection
           style="min-height: 160px"
-          class="pt-5"
+          class="pa-6"
           @selected="gallerySelected"
           :selected="selected"
           :images="images"

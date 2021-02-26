@@ -1,20 +1,22 @@
 <template>
   <v-row
     class="black pa-10"
-    style="position: relative;min-height: 650px"
-    align="center"
+    style="position: relative;min-height: 600px"
+    align="top"
     justify="center"
   >
     <v-col cols="10" class=" text-center">
       <v-slide-x-transition>
-        <figure v-if="!loading && src">
-          <img
-            id="u-previewed-image"
-            :src="src"
-            :class="filterMode ? 'filter-mode-on' : ''"
-            ref="selectedImage"
-            :style="filters"
-          />
+        <div v-if="!loading && src">
+          <figure style="height: 450px">
+            <img
+              id="u-previewed-image"
+              :src="src"
+              :class="filterMode ? 'filter-mode-on' : ''"
+              ref="selectedImage"
+              :style="filters"
+            />
+          </figure>
           <div style="height:70px" class="pt-2">
             <action-buttons
               :selected="selected"
@@ -27,7 +29,7 @@
               @edit-mode="editMode = $event"
             />
           </div>
-        </figure>
+        </div>
       </v-slide-x-transition>
 
       <v-slide-y-transition>
@@ -100,7 +102,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 #u-previewed-image {
-  height: 400px;
+  height: 450px;
   max-width: 100%;
   transform: translateX(0);
   transition: all 0.5s;
