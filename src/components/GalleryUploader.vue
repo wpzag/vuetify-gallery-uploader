@@ -187,7 +187,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 .z-colorful-loader {
   text-align: center;
 }
