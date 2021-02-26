@@ -24,8 +24,8 @@ export default {
   name: "v-cool-loader"
 };
 </script>
-<style lang="scss" rel="stylesheet/scss" scoped>
-> .z-colorful-loader {
+<style>
+.z-colorful-loader {
   text-align: center;
 }
 .z-colorful-loader h2 {
