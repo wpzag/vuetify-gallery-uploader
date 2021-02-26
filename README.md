@@ -4,9 +4,27 @@
 ```
 npm i vuetify-gallery-uploader
 ```
-## Under Development
+## Usage
 ```
-This plugin is still under development
+import VuetifyGalleryUploader from "vuetify-gallery-uploader";
+
+Vue.use(VuetifyGalleryUploader);
 ```
+
+## Example
+```
+<gallery-uploader @submit="submit" />
+
+methods:{
+       submit(data){
+            // List of all images
+            console.log(data)
+        }
+    }
+
+```
+Screenshots
+
+![Show Case](https://github.com/osamaegy/vuetify-gallery-uploader/blob/origin/src/assets/showcase-1.png)
 
 

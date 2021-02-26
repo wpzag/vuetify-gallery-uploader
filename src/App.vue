@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main class=" text-center" style="padding-top: 250px;">
-      <gallery-uploader style="margin:0 auto" />
+      <gallery-uploader @submit="submit" style="margin:0 auto" />
     </v-main>
   </v-app>
 </template>
@@ -23,11 +23,12 @@ export default {
   },
   methods: {
     submit(files) {
-      this.images = files;
-
-      setTimeout(() => {
-        this.dialog = true;
-      }, 500);
+      console.log(files);
+      // this.images = files;
+      //
+      // setTimeout(() => {
+      //   this.dialog = true;
+      // }, 500);
     },
     fakeIMAGES() {
       let urls = [

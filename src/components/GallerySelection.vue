@@ -21,12 +21,24 @@
         </v-overlay>
       </v-fade-transition>
     </v-card>
+
+    <v-card
+      height="100px"
+      width="100px"
+      :style="showAddButton ? 'transform: scale(1)' : ''"
+      class="d-inline-block rounded-lg overflow-hidden ma-3  "
+      elevation="0"
+    >
+      <add-image-button @addImage="$emit('addImage')" />
+    </v-card>
   </v-card>
 </template>
 
 <script>
+import AddImageButton from "./AddImageButton";
 export default {
   name: "gallery-selection",
+  components: { AddImageButton },
   props: ["images", "selected"],
   data() {
     return {
@@ -63,13 +75,13 @@ export default {
       this.$emit("loading", false);
       setTimeout(() => {
         this.loadedImages.forEach(el => {
-          setTimeout(() => this.animatedItems.push(el), 200 * el);
+          setTimeout(() => this.animatedItems.push(el), 100 * el);
           if (this.loadedImages.length - 1 === el)
             setTimeout(() => {
               this.showAddButton = true;
-            }, 200 * el + 1);
+            }, 100 * el + 1);
         });
-      }, 200);
+      }, 100);
     },
     imageSelected(index) {
       this.selectedImage = index;

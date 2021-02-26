@@ -1,13 +1,13 @@
 <template>
   <v-row
     class="black pa-10"
-    style="height: 600px;position: relative"
+    style="position: relative;min-height: 650px"
     align="center"
     justify="center"
   >
     <v-col cols="10" class=" text-center">
       <v-slide-x-transition>
-        <figure v-if="!loading && src" style="height:400px">
+        <figure v-if="!loading && src">
           <img
             id="u-previewed-image"
             :src="src"
@@ -15,6 +15,18 @@
             ref="selectedImage"
             :style="filters"
           />
+          <div style="height:70px" class="pt-2">
+            <action-buttons
+              :selected="selected"
+              :filter-mode="filterMode"
+              :selectedImageSrc="src"
+              @image-edited="imageEdited"
+              @image-removed="imageRemoved"
+              @reset-all="$emit('reset-all')"
+              @filter="filterMode = true"
+              @edit-mode="editMode = $event"
+            />
+          </div>
         </figure>
       </v-slide-x-transition>
 
@@ -28,18 +40,6 @@
           v-show="filterMode"
         />
       </v-slide-y-transition>
-      <div style="height:70px" class="pt-5">
-        <action-buttons
-          :selected="selected"
-          :filter-mode="filterMode"
-          :selectedImageSrc="src"
-          @image-edited="imageEdited"
-          @image-removed="imageRemoved"
-          @reset-all="$emit('reset-all')"
-          @filter="filterMode = true"
-          @edit-mode="editMode = $event"
-        />
-      </div>
     </v-col>
   </v-row>
 </template>
@@ -101,12 +101,14 @@ export default {
 <style lang="scss" scoped>
 #u-previewed-image {
   height: 400px;
+  max-width: 100%;
   transform: translateX(0);
   transition: all 0.5s;
 }
 #u-previewed-image.filter-mode-on {
-  max-width: 400px;
+  /*max-width: 500px;*/
+
   background-size: cover;
-  transform: translateX(-5em);
+  transform: translateX(-7em);
 }
 </style>

@@ -13,11 +13,22 @@
     <icon-button
       name="Upload Image"
       icon="mdi-image-plus"
-      @clicked="$refs.uploader.$refs.input.click()"
+      @clicked="addImage"
     ></icon-button>
 
-    <v-dialog v-model="dialog" width="800px">
-      <v-card class="overflow-hidden">
+    <v-dialog v-model="dialog" width="80%" persistent>
+      <v-card dark class="overflow-hidden">
+        <v-btn
+          class="mx-2 pa-2"
+          fab
+          dark
+          large
+          absolute
+          style="top:15px;right:1px"
+          @click="close"
+        >
+          <v-icon dark>mdi-close</v-icon>
+        </v-btn>
         <image-editor
           @image-edited="imageEdited"
           @image-removed="imageRemoved"
@@ -37,6 +48,7 @@
           :selected="selected"
           :images="images"
           @loading="loading = $event"
+          @addImage="addImage"
         />
         <discard-changes-dialog
           @close="discardChanges"
@@ -45,18 +57,23 @@
         />
 
         <v-fade-transition>
-          <v-overlay :absolute="true" :opacity="1" :value="true">
+          <v-overlay :absolute="true" :opacity="1" :value="loading">
             <v-cool-loader />
           </v-overlay>
         </v-fade-transition>
+        <v-divider />
+
+        <v-card-actions class="pt-5 pb-5">
+          <v-spacer />
+          <v-btn @click="close" color="error" text>Cancel</v-btn>
+          <v-btn @click="emitFinalImages">Submit</v-btn>
+        </v-card-actions>
       </v-card>
     </v-dialog>
   </span>
 </template>
 
 <script>
-import "../assets/style.css";
-
 import ImageEditor from "./image-editor/ImageEditor";
 import GallerySelection from "./GallerySelection";
 import DiscardChangesDialog from "./image-editor/DiscardChangesDialog";
@@ -81,11 +98,11 @@ export default {
       selected: 0,
       imageEditorKey: 1,
       discardChangesDialog: false,
-      deleted: null,
+
       filterMode: false,
       editMode: false,
       newSelectedImage: null,
-      items: null,
+      items: [],
       dialog: false
     };
   },
@@ -96,7 +113,29 @@ export default {
   },
 
   methods: {
+    emitFinalImages() {
+      this.$emit("submit", this.images);
+    },
+    close() {
+      this.loading = true;
+      this.images = [];
+      this.originalImages = [];
+      this.selected = 0;
+      this.discardChangesDialog = false;
+
+      this.filterMode = false;
+      this.editMode = false;
+      this.newSelectedImage = null;
+      this.items = [];
+      this.dialog = false;
+      this.imageEditorKey++;
+    },
+    addImage() {
+      this.$refs.uploader.$refs.input.click();
+    },
     submit(files) {
+      this.loading = true;
+
       this.items = files;
       this.dialog = true;
       this.init();
