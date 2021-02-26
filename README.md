@@ -1,4 +1,4 @@
-# Vuetify Media Uploader
+# Vuetify Gallery Uploader
 
 ## Project setup
 ```
