@@ -72,7 +72,7 @@ import DiscardChangesDialog from "./image-editor/DiscardChangesDialog";
 import IconButton from "./image-editor/IconButton";
 
 export default {
-  name: "gallery-uploader",
+  name: "v-gallery-uploader",
   components: {
     IconButton,
     DiscardChangesDialog,

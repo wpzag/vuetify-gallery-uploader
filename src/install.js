@@ -1,10 +1,10 @@
-import GalleryUploader from "./components/GalleryUploader.vue";
+import VGalleryUploader from "./components/GalleryUploader.vue";
 
 const VuetifyGalleryUploader = {
   install(Vue) {
     // Let's register our component globally
     // https://vuejs.org/v2/guide/components-registration.html
-    Vue.component("v-gallery-uploader", GalleryUploader);
+    Vue.component("v-gallery-uploader", VGalleryUploader);
   }
 };
 
