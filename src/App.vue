@@ -1,29 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    saSassss
-  </div>
+  <v-app>
+    <v-main class=" text-center" style="padding-top: 250px;">
+      <gallery-uploader style="margin:0 auto" />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GalleryUploader from "./components/GalleryUploader.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  components: { GalleryUploader },
 
-<style scoped>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  name: "App",
+
+  data: () => ({
+    images: [],
+    dialog: false
+  }),
+  created() {
+    this.fakeIMAGES();
+  },
+  methods: {
+    submit(files) {
+      this.images = files;
+
+      setTimeout(() => {
+        this.dialog = true;
+      }, 500);
+    },
+    fakeIMAGES() {
+      let urls = [
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80",
+        "https://images.unsplash.com/photo-1614059632169-522876ce04c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3068&q=80",
+        "https://images.unsplash.com/photo-1613975570624-b3be42ffdebe?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3068&q=80",
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3744&q=80"
+      ];
+      let i = 0;
+      urls.forEach(url => {
+        fetch(url).then(async response => {
+          const contentType = response.headers.get("content-type");
+          const blob = await response.blob();
+          const file = new File([blob], "mesh" + i, { contentType });
+          this.images.push(file);
+          i++;
+        });
+      });
+    }
+  }
+};
+</script>

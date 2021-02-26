@@ -1,37 +1,42 @@
 {
-  "name": "vue-hello-world-simple",
-    "description": "A simple vuejs Hello World plugin",
-    "version": "0.1.0",
-    "private": false,
-    "author": {
-        "name": "Tushar Gugnani",
-        "email": "tushar@5balloons.info"
-    },
-    "repository": "https://github.com/tushargugnani/vue-hello-world-simple",
-    "bugs": "https://github.com/tushargugnani/vue-hello-world-simple/issues",
-    "keywords": ["keywords", "go", "here"],
-    "license": "MIT",
-    "files": ["dist"],
-    "scripts": {
-      "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build",
-      "build-library" : "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js",
-      "lint": "vue-cli-service lint"
-    },
-    "main" : ".dist/vuetify-media-uploader.common.js",
-
+  "name": "vuetify-gallery-uploader",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A simple gallery uploader plugin",
+  "author": {
+    "name": "Tushar Gugnani",
+    "email": "tushar@5balloons.info"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-library": "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js"
+  },
+  "main": ".dist/vuetify-media-uploader.common.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "cropperjs": "^1.5.11",
+    "image-file-resize": "^1.0.3",
+    "vue": "^2.6.11",
+    "vuetify": "^2.4.0"
   },
   "devDependencies": {
+    "@mdi/js": "^5.9.55",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.1.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,
@@ -51,5 +56,13 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "bugs": "https://github.com/osamaegy/vuetify-media-uploader/issues",
+  "keywords": [
+    "vuetify",
+    "gallery",
+    "uploader"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/osamaegy/vuetify-media-uploader"
 }
